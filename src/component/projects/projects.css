@@ -1,0 +1,22 @@
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+}
+
+.projects__title {
+  font-family: "Gilroy-Bold";
+  font-size: 42px;
+  line-height: 1.23;
+  margin-bottom: 40px;
+}
+
+.projects__description {
+  max-width: 780px;
+  text-align: center;
+  font-family: 'Gilroy-Light';
+  font-size: 26px;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}

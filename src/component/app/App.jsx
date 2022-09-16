@@ -1,11 +1,11 @@
 import React from "react";
-import Parralax from "../parallax/Parralax";
+import MainPage from "../../pages/mainPage/MainPage";
 
 import "./app.css";
 
 const App = () => {
   return (
-    <Parralax />
+    <MainPage />
   );
 };
 

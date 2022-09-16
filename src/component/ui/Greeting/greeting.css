@@ -1,0 +1,15 @@
+.greeting {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.greeting__text {
+  max-width: 780px;
+  text-align: center;
+  font-family: 'Gilroy-Light';
+  font-size: 26px;
+  line-height: 1.5;
+}

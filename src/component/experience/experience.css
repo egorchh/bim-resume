@@ -1,0 +1,55 @@
+.experience {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+  color: #000
+}
+
+.experience__title {
+  font-family: "Gilroy-Bold";
+  font-size: 42px;
+  line-height: 1.23;
+  margin-bottom: 40px;
+}
+
+.experience__list {
+  list-style: none;
+}
+
+.experience__item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.item__company {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-family: 'Gilroy-Bold';
+  text-decoration: none;
+  font-size: 26px;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.item__company-link {
+  display: flex;
+  align-items: center;
+}
+
+.item__company-svg {
+  margin-left: 10px;
+}
+
+.item__post {
+  font-family: 'Gilroy-Semibold';
+  font-size: 20px;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.item__date {
+  font-family: 'Gilroy-Regular';
+  font-size: 16px;
+  color: grey
+}

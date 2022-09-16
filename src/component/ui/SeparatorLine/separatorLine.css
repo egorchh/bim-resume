@@ -1,0 +1,12 @@
+.separatorLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separatorLine__line {
+  width: 760px;
+  height: 1.3px;
+  border: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,0, 0, 0.9), rgba(0, 0, 0, 0));
+}
