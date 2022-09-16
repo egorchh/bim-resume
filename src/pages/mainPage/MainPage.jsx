@@ -5,6 +5,7 @@ import SeparatorLine from '../../component/ui/SeparatorLine/SeparatorLine';
 import Projects from '../../component/projects/Projects';
 
 import './mainPage.css'
+import Skills from '../../component/skills/Skills';
 
 const MainPage = () => {
   return (
@@ -15,6 +16,8 @@ const MainPage = () => {
       <Experience />
       <SeparatorLine />
       <Projects />
+      <SeparatorLine />
+      <Skills />
       <SeparatorLine />
     </div>
   );

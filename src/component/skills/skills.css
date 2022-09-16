@@ -1,0 +1,88 @@
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+}
+
+.skills__wrapper {
+  max-width: 1200px;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.skills__svg {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 37px;
+}
+
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin-bottom: 30px;
+}
+
+.skills__item:not(:nth-child(3n)) {
+  margin-right: 40px;
+}
+
+.skills__item-name {
+  font-family: "Gilroy-Semibold";
+  font-size: 24px;
+  margin-bottom: 25px;
+  line-height: 1.17;
+}
+
+.skills__item-descr {
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  color: grey;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 320px;
+}
+
+.skills__title {
+  font-family: "Gilroy-Bold";
+  font-size: 42px;
+  line-height: 1.23;
+  margin-bottom: 40px;
+}
+
+.skills__item-university, .skills__item-isi, .skills__item-direction {
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  color: grey;
+  text-align: start;
+  margin-bottom: 5px;
+  max-width: 320px;
+}
+
+.skills__item-university {
+  font-family: "Gilroy-Semibold";
+  color: #000;
+}
+
+.skills__item-programs {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 77px;
+}
+
+.skills__item-program {
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  color: grey;
+  text-align: start;
+  margin-bottom: 5px;
+}
+
