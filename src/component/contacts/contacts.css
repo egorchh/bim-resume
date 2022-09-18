@@ -6,21 +6,21 @@
 
 .contacts__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .contacts__wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 400px;
+  margin-right: 40px;
 }
 
 .contacts__title {
   font-family: "Gilroy-Bold";
   font-size: 42px;
-  line-height: 1.23;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -30,12 +30,13 @@
   color: grey;
   text-align: center;
   font-size: 22px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .contacts__networks {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 140px;
   margin-bottom: 15px;
 }
@@ -44,4 +45,26 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.contacts__email, .contacts__tell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.contacts__email-svg,
+.contacts__tell-svg {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.contacts__email-text,
+.contacts__tell-text {
+  font-family: 'Gilroy-Semibold';
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+  margin-bottom: 0;
 }

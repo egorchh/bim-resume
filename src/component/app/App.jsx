@@ -1,6 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import React from "react";
 import MainPage from "../../pages/mainPage/MainPage";
 import ProjectPage from '../../pages/projectPage/ProjectPage';
 import Page404 from '../../pages/page404/Page404';
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="*" element={<Page404 />} />
         </Routes>
       </Router>
-      
       <SeparatorLine />
       <Contacts />
     </>

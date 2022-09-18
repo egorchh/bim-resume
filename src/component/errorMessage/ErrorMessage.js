@@ -12,7 +12,7 @@ const ErrorMessage = () => {
         marginTop: 60,
       }}
       src={img}
-      alt="Loading error"
+      alt="Ошибка"
     />
   );
 };

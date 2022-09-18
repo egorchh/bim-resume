@@ -1,0 +1,12 @@
+.carousel__image {
+  height: 280px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.carousel__helper {
+  margin-top: 20px;
+  font-family: "Gilroy-Regular";
+  text-align: center;
+  
+}

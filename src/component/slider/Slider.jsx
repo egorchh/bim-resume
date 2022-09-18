@@ -1,11 +1,9 @@
-import React from 'react';
+import { useContext } from 'react';
+import { DataContext } from '../../dataContext/DataContext';
 import { Slide } from 'react-slideshow-image';
 import { Link } from 'react-router-dom';
 
-import educationOrganization from '../../assets/images/Image4.png'
-import hidrotecnicalCorpus from '../../assets/images/ISPRAVIT_K_NOPRIZU.png'
-import shoppingCentre from '../../assets/images/Mnogofunktsionalny_torgovy_tsentr_5.png'
-import exhibitionCenter from '../../assets/images/Render_5.png'
+
 import nextArrow from '../../assets/images/svg/arrow-right.svg'
 import prevArrow from '../../assets/images/svg/arrow-left.svg'
 
@@ -13,14 +11,8 @@ import 'react-slideshow-image/dist/styles.css';
 import './slider.css'
 
 const Slider = () => {
-  const projects = [
-      {id: 1, img: shoppingCentre, title: 'Многофункциональный торговый комплекс', descr: 'Концептуальный проект'},
-      {id: 2, img: hidrotecnicalCorpus, title: 'Гидротехнический корпус Санкт-Петербургского университета Петра Великого', descr: 'Проект реставрации'},
-      {id: 3, img: exhibitionCenter, title: 'Выставочный центр г. Пермь', descr: 'Концептуальный проект'},
-      {id: 4, img: educationOrganization, title: 'Общеобразовательная организация', descr: 'Концептуальный проект'},
-    ];
 
-  // console.log(images[0])
+  const data = useContext(DataContext)
 
   const prevButtonStyle = {
     background: 'none',
@@ -46,10 +38,10 @@ const Slider = () => {
   }
 
   function renderProjects(arr) {
-    const projects = arr.map((item) => {
+    const data = arr.map((item) => {
       return (
         <div key={item.id} className="slide__wrapper">
-          <Link to={`/projects/${item.id}`}>
+          <Link to={{pathname: `/projects/${item.id}`, props: item}}>
             <div className="each-slide-effect">
               <div style={{ 'backgroundImage': `url(${item.img})` }} />
             </div>
@@ -70,14 +62,14 @@ const Slider = () => {
         easing={'ease-out'} 
         autoplay={false} {...properties}
       >
-        {projects}
+        {data}
       </Slide>
     )
   }
 
   return (
     <div className="shadow">
-      {renderProjects(projects)}
+      {renderProjects(data)}
     </div>
   );
 };

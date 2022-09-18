@@ -1,0 +1,26 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.88);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.modal__image {
+  border-radius: 15px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  width: 40px;
+}

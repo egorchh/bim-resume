@@ -18,7 +18,7 @@ const Page404 = () => {
           marginTop: 30,
         }}
       >
-        Page doesn't exist
+        Такой страницы не существует... =(
       </p>
       <Link
         style={{
@@ -28,12 +28,11 @@ const Page404 = () => {
           textAlign: "center",
           fontWeight: 400,
           fontSize: 20,
-          marginTop: 50,
           marginBottom: 60,
         }}
         to="/"
       >
-        Back to main page
+        Вернуться на главную страницу
       </Link>
     </div>
   );
