@@ -14,20 +14,26 @@
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
 .skills__svg {
   width: 70px;
   height: 70px;
-  margin-bottom: 37px;
+  margin-bottom: 25px;
 }
 
 .skills__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
+  width: 360px;
   margin-bottom: 30px;
+  -webkit-box-shadow: 0px 5px 13px -2px rgba(34, 60, 80, 0.19);
+    -moz-box-shadow: 0px 5px 13px -2px rgba(34, 60, 80, 0.19);
+    box-shadow: 0px 5px 13px -2px rgba(34, 60, 80, 0.19);
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
 }
 
 .skills__item:not(:nth-child(3n)) {
@@ -37,7 +43,7 @@
 .skills__item-name {
   font-family: "Gilroy-Semibold";
   font-size: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   line-height: 1.17;
 }
 
@@ -54,7 +60,7 @@
   font-family: "Gilroy-Bold";
   font-size: 42px;
   line-height: 1.23;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .skills__item-university, .skills__item-isi, .skills__item-direction {
@@ -76,6 +82,7 @@
   flex-direction: column;
   align-items: left;
   margin-left: 77px;
+  padding: 0;
 }
 
 .skills__item-program {

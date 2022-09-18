@@ -1,5 +1,6 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
+import { Link } from 'react-router-dom';
 
 import educationOrganization from '../../assets/images/Image4.png'
 import hidrotecnicalCorpus from '../../assets/images/ISPRAVIT_K_NOPRIZU.png'
@@ -12,9 +13,14 @@ import 'react-slideshow-image/dist/styles.css';
 import './slider.css'
 
 const Slider = () => {
-  const images = [
-          shoppingCentre, hidrotecnicalCorpus, exhibitionCenter, educationOrganization,
-      ];
+  const projects = [
+      {id: 1, img: shoppingCentre, title: 'Многофункциональный торговый комплекс', descr: 'Концептуальный проект'},
+      {id: 2, img: hidrotecnicalCorpus, title: 'Гидротехнический корпус Санкт-Петербургского университета Петра Великого', descr: 'Проект реставрации'},
+      {id: 3, img: exhibitionCenter, title: 'Выставочный центр г. Пермь', descr: 'Концептуальный проект'},
+      {id: 4, img: educationOrganization, title: 'Общеобразовательная организация', descr: 'Концептуальный проект'},
+    ];
+
+  // console.log(images[0])
 
   const prevButtonStyle = {
     background: 'none',
@@ -39,51 +45,39 @@ const Slider = () => {
       </button>
   }
 
-  return (
-    <div className="shadow">
+  function renderProjects(arr) {
+    const projects = arr.map((item) => {
+      return (
+        <div key={item.id} className="slide__wrapper">
+          <Link to={`/projects/${item.id}`}>
+            <div className="each-slide-effect">
+              <div style={{ 'backgroundImage': `url(${item.img})` }} />
+            </div>
+          </Link>
+          <div className="slide__text">
+            <p className="slide__name">{item.title}</p>
+            <p className="slide__descr">{item.descr}</p>
+          </div>
+        </div>
+      );
+    });
+
+
+    return (
       <Slide 
         transitionDuration={500} 
         indicators={indicators} 
         easing={'ease-out'} 
         autoplay={false} {...properties}
       >
-          <div className="slide__wrapper">
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[0]})` }} />
-            </div>
-            <div className="slide__text">
-              <p className="slide__name">Многофункциональный торговый комплекс</p>
-              <p className="slide__descr">Концептуальный проект</p>
-            </div>
-          </div>
-          <div className="slide__wrapper">
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[1]})` }} />
-            </div>
-            <div className="slide__text">
-              <p className="slide__name">Гидротехнический корпус Санкт-Петербургского университета Петра Великого</p>
-              <p className="slide__descr">Проект реставрации</p>  
-            </div>
-          </div>
-          <div className="slide__wrapper">
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[2]})` }} />
-            </div>
-            <div className="slide__text">
-              <p className="slide__name">Выставочный центр г. Пермь</p>
-              <p className="slide__descr">Концептуальный проект</p>
-            </div>
-          </div>
-          <div className="slide__wrapper">
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[3]})` }} />
-            </div>
-            <div className="slide__text">
-              <p className="slide__name">Общеобразовательная организация</p>
-              <p className="slide__descr">Концептуальный проект</p>
-            </div>
-          </div>
+        {projects}
       </Slide>
+    )
+  }
+
+  return (
+    <div className="shadow">
+      {renderProjects(projects)}
     </div>
   );
 };
