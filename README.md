@@ -1,3 +1,3 @@
-# React SPA - resume for my friend.
+# Сommercial project: React SPA - resume for civil architector.
 
 Created by Egor Podolskij with love <3
