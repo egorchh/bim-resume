@@ -26,8 +26,14 @@
 }
 
 .project__descr {
-  font-family: "Gilroy-Light";
+  font-family: "Gilroy-Regular";
   font-size: 24px;
+  color: grey;
+}
+
+.project__annotation {
+  font-family: "Gilroy-Light";
+  font-size: 15px;
   color: grey;
 }
 
@@ -49,4 +55,8 @@
   text-decoration: none;
   color: inherit;
   margin-bottom: 20px;
+}
+
+a:hover {
+  color: inherit;
 }

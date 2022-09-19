@@ -40,7 +40,31 @@
   font-family: "Gilroy-Light";
   font-size: 15px;
   color: grey;
+  margin-bottom: 7px;
+}
+
+.slide__link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.slide__link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.slide__link-svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+.slide__link-text {
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  color: rgb(0, 0, 0);
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .shadow {

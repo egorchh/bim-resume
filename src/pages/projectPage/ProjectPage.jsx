@@ -19,7 +19,7 @@ const ProjectPage = () => {
     return filteredData;
   }
 
-  const {img, title, descr, projects} = getElementById(id, data)[0];
+  const {img, title, descr, projects, annotation} = getElementById(id, data)[0];
 
   return (
     <section className="project">
@@ -38,6 +38,9 @@ const ProjectPage = () => {
         <div className="project__info">
           <h2 className="project__name">{title}</h2>
           <p className="project__descr">{descr}</p>
+          <p className="project__annotation">
+            {annotation}
+          </p>
         </div>
       </div>
       <Carousel id={id} projects={projects} />
