@@ -39,8 +39,7 @@ const EmailForm = () => {
           }} disabled={state.submitting || !isValid} className={`contacts__button ${state.submitting || !isValid ? 'disabled-button': 'active-button'}`} type="submit">
             Отправить
           </button>
-          {/* {isValid ? succesMessage : null} */}
-          <SuccessMessage/>
+          {isValid ? succesMessage : null}
         </Form>
       )}
     </Formik>
