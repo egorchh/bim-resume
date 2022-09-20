@@ -7,14 +7,6 @@
   background-repeat: no-repeat;
   height: 450px;
   margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.each-slide-effect span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
 }
 
 .react-slideshow-container {
@@ -26,7 +18,6 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  
 }
 
 .slide__name {
@@ -98,4 +89,280 @@
   background: rgb(20, 20, 20);
   width: 12px;
   height: 12px;
+}
+
+.prev-button {
+  background: none;
+  border: none;
+  transform: translateX(-250%);
+}
+
+.prev-button__svg, .next-button__svg {
+  width: 35px;
+}
+
+.next-button {
+  background: none;
+  border: none;
+  transform: translateX(250%);
+}
+
+@media screen and (max-width: 991px) {
+  /* Отображение картинки */
+
+  .each-slide-effect>div {
+    height: 375px;
+  }
+
+  .react-slideshow-container {
+    width: 500px;
+  }
+
+  /* Надписи */
+
+  .slide__name {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .slide__descr {
+    margin-bottom: 6px;
+  }
+
+  .shadow {
+    padding-bottom: 0px;
+  }
+
+  /* Индикаторы */
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .indicator:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  .indicator.active {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Кнопки перемещения */
+
+  .prev-button {
+    transform: translateX(-200%);
+  }
+
+  .next-button {
+    transform: translateX(200%);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  /* Отображение картинки */
+
+  .each-slide-effect>div {
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .react-slideshow-container {
+    width: 400px;
+  }
+
+  /* Надписи */
+
+  .slide__name {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .slide__descr {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .slide__link-svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .slide__link-text {
+    font-size: 13px;
+  }
+
+  /* Индикаторы */
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+    margin: 0;
+  }
+
+  .indicator:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  .indicator.active {
+    width: 8px;
+    height: 8px;
+  }
+
+  .react-slideshow-container+ul.indicators {
+    margin-top: 10px;
+  }
+
+  /* Кнопки перемещения */
+
+  .prev-button {
+    transform: translateX(-150%);
+  }
+
+  .next-button {
+    transform: translateX(150%);
+  }
+}
+
+@media screen and (max-width: 510px) {
+  /* Отображение картинки */
+
+  .each-slide-effect>div {
+    height: 225px;
+    margin-bottom: 10px;
+  }
+
+  .react-slideshow-container {
+    width: 300px;
+  }
+
+  /* Надписи */
+
+  .slide__name {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .slide__descr {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .slide__link-svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .slide__link-text {
+    font-size: 10px;
+  }
+
+  /* Индикаторы */
+
+  .indicator {
+    width: 4px;
+    height: 4px;
+    margin: 0;
+  }
+
+  .indicator:not(:first-child) {
+    margin-left: 6px;
+  }
+
+  .indicator.active {
+    width: 6px;
+    height: 6px;
+  }
+
+  .react-slideshow-container+ul.indicators {
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* Кнопки перемещения */
+
+  .prev-button {
+    transform: translateX(-130%);
+  }
+
+  .next-button {
+    transform: translateX(130%);
+  }
+
+  .prev-button__svg,
+  .next-button__svg {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* Отображение картинки */
+  
+  .each-slide-effect>div {
+    height: 187px;
+    margin-bottom: 6px;
+  }
+
+  .react-slideshow-container {
+    width: 250px;
+  }
+
+  /* Надписи */
+
+  .slide__name {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .slide__descr {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+
+  .slide__link-svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slide__link-text {
+    font-size: 9px;
+  }
+
+  /* Индикаторы */
+
+  .indicator {
+    width: 4px;
+    height: 4px;
+    margin: 0;
+  }
+
+  .indicator:not(:first-child) {
+    margin-left: 6px;
+  }
+
+  .indicator.active {
+    width: 6px;
+    height: 6px;
+  }
+
+  .react-slideshow-container+ul.indicators {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  /* Кнопки перемещения */
+
+  .prev-button {
+    transform: translateX(-130%);
+  }
+
+  .next-button {
+    transform: translateX(130%);
+  }
+
+  .prev-button__svg,
+  .next-button__svg {
+    width: 25px;
+  }
 }

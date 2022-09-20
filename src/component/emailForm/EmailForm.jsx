@@ -2,14 +2,10 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useForm } from '@formspree/react';
 import * as Yup from 'yup'
 
-import Spinner from 'react-bootstrap/Spinner';
-
 import './emailForm.css'
-import { useState } from 'react';
-import { useCallback } from 'react';
 
 const EmailForm = () => {
-  const [state, handleSubmit] = useForm('xlevjpvb');
+  const [state, handleSubmit] = useForm('xgeqadrr');
 
   const succesMessage = state.succeeded ? <SuccessMessage/> : null
 
@@ -43,7 +39,8 @@ const EmailForm = () => {
           }} disabled={state.submitting || !isValid} className={`contacts__button ${state.submitting || !isValid ? 'disabled-button': 'active-button'}`} type="submit">
             Отправить
           </button>
-          {isValid ? succesMessage : null}
+          {/* {isValid ? succesMessage : null} */}
+          <SuccessMessage/>
         </Form>
       )}
     </Formik>

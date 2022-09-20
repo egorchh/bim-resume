@@ -4,9 +4,109 @@
   border-radius: 10px;
 }
 
+.carousel__item {
+  margin-right: 135px;
+}
+
 .carousel__helper {
   margin-top: 20px;
   font-family: "Gilroy-Regular";
   text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .carousel__image {
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+  }
+
+  .carousel__item {
+    margin-right: 100px;
+  }
+
+  .carousel__helper {
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .carousel__image {
+    height: 230px;
+    width: 330px;
+    border-radius: 8px;
+  }
+
+  .carousel__item {
+    margin-right: 60px;
+  }
+
+  .carousel__helper {
+    font-size: 13px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .carousel__image {
+    height: 182px;
+    width: 260px;
+    border-radius: 8px;
+  }
+
+  .carousel__item {
+    margin-right: 60px;
+  }
+
+  .carousel__helper {
+    font-size: 13px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .carousel__image {
+      height: 168px;
+      width: 240px;
+    }
   
+    .carousel__helper {
+      font-size: 10px;
+      margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+  .carousel__image {
+    height: 130px;
+    width: 180px;
+    border-radius: 6px;
+  }
+
+  .carousel__helper {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .carousel__image {
+    height: 105px;
+    width: 150px;
+    border-radius: 8px;
+  }
+
+  .carousel__helper {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .carousel__image {
+    height: 98px;
+    width: 140px;
+  }
+
+  .carousel__helper {
+    font-size: 8px;
+  }
 }

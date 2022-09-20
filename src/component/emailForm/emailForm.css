@@ -68,10 +68,11 @@
   background-color: #198754;
   font-family: "Gilroy-Semibold";
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.success-error {
+.error-message {
   width: 300px;
   padding: 20px 20px;
   margin-top: 20px;
@@ -79,5 +80,82 @@
   font-family: "Gilroy-Semibold";
   color: #fff;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .contacts__input,
+  .contacts__textarea {
+    width: 270px;
+    border: none;
+    margin-bottom: 35px;
+  }
+
+  .contacts__textarea {
+    height: 130px;
+  }
+
+  .contacts__button {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .error-textarea {
+    top: 150px;
+  }
+
+  .success-message, .error-message {
+    max-width: 270px;
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .contacts__input,
+  .contacts__textarea {
+    font-size: 15px;
+  }
+
+  .contacts__button {
+    font-size: 14px;
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .contacts__input,
+  .contacts__textarea {
+    font-size: 12px;
+  }
+
+  .contacts__button {
+    font-size: 12px;
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 12px;
+  }
+
+  .error-email {
+    top: 55px;
+  }
+
+  .error-textarea {
+    top: 147px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .error-email {
+    top: 52px;
+  }
 }

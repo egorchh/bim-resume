@@ -10,3 +10,36 @@
   border: 0;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,0, 0, 0.9), rgba(0, 0, 0, 0));
 }
+
+@media screen and (max-width: 991px) {
+  .separatorLine__line {
+    width: 660px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .separatorLine__line {
+    width: 530px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .separatorLine__line {
+    width: 330px;
+    height: 1.3px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .separatorLine__line {
+    width: 330px;
+    height: 1.1px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .separatorLine__line {
+    width: 240px;
+    height: 1px;
+  }
+}

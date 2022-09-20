@@ -16,26 +16,14 @@ const Slider = () => {
 
   const data = useContext(DataContext)
 
-  const prevButtonStyle = {
-    background: 'none',
-    border: '0px',
-    transform: 'translateX(-250%)'
-  };
-
-  const nextButtonStyle = {
-    background: 'none',
-    border: '0px',
-    transform: 'translateX(250%)'
-  };
-
   const indicators = () => (<div className="indicator" />);
 
   const properties = {
-      prevArrow: <button style={{ ...prevButtonStyle }}>
-        <img style={{width: '35px'}} src={prevArrow} alt="Prev arrow" />
+      prevArrow: <button className='prev-button'>
+        <img className='prev-button__svg'  src={prevArrow} alt="Prev arrow" />
       </button>,
-      nextArrow: <button style={{ ...nextButtonStyle }}>
-        <img style={{width: '35px'}} src={nextArrow} alt="Next arrow" />
+      nextArrow: <button className='next-button'>
+        <img className='next-button__svg' src={nextArrow} alt="Next arrow" />
       </button>
   }
 

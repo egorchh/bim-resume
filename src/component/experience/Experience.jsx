@@ -10,7 +10,7 @@ const Experience = () => {
           <div className="item__company">
             Петербургская недвижимость
             <a className="item__company-link" target="_blank" href="https://setlgroup.ru/">
-              <img className='item__company-svg' alt="Link" style={{width: 26, height: 26}} src={linkSvg}/>
+              <img className='item__company-svg' alt="Link" src={linkSvg}/>
             </a>
           </div>
           <p className="item__post">Практикант под руководством ведущего инженера по строительству</p>
@@ -20,7 +20,7 @@ const Experience = () => {
           <div className="item__company">
             Реновация города
             <a className="item__company-link" target="_blank" href="https://urbanrenovation.ru/">
-              <img className='item__company-svg' alt="Link" style={{width: 26, height: 26}} src={linkSvg}/>
+              <img className='item__company-svg' alt="Link" src={linkSvg}/>
             </a>
           </div>
           <p className="item__post">Архитектор</p>
@@ -30,7 +30,7 @@ const Experience = () => {
           <div className="item__company">
             МПИ
             <a className="item__company-link" target="_blank" href="#">
-              <img className='item__company-svg' alt="Link" style={{width: 26, height: 26}} src={linkSvg}/>
+              <img className='item__company-svg' alt="Link" src={linkSvg}/>
             </a>
           </div>
           <p className="item__post">Архитектор</p>

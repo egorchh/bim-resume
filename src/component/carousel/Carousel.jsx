@@ -24,7 +24,7 @@ const Carousel = ({projects, id}) => {
   const renderProjects = (arr) => {
     const projects = arr.map(item => {
       return (
-        <SwiperSlide>
+        <SwiperSlide className='carousel__item'>
           <li onClick={() => openModal(item)} key={id} className="carousel__item">
             <img className="carousel__image" src={item} alt='Фото проекта' />
           </li>
@@ -36,15 +36,13 @@ const Carousel = ({projects, id}) => {
   }
 
   return (
-    <div  style={{ maxWidth: 1200}}>
+    <div>
       <Swiper
-        className="carousel"
-        style={{marginTop: 40}}
-        spaceBetween={390}
+        // spaceBetween={390}
         slidesPerView={3}
         loop={true}
       >
-        <div >
+        <div>
           {renderProjects(projects)}
         </div>
       </Swiper>
