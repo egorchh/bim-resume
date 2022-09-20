@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bim-resume//static/css/main.48a2e103.css",
-    "main.js": "/bim-resume//static/js/main.b82a4c82.js",
+    "main.js": "/bim-resume//static/js/main.4b05d0ff.js",
     "static/media/3.jpg": "/bim-resume//static/media/3.e30a289146aba8058a73.jpg",
     "static/media/2.jpg": "/bim-resume//static/media/2.6e1b220525d24eabe102.jpg",
     "static/media/5.jpg": "/bim-resume//static/media/5.178cf773696a2dddbf1b.jpg",
@@ -42,10 +42,10 @@
     "static/media/arrow-right.svg": "/bim-resume//static/media/arrow-right.5e3e4e57f27467a439d7c7ab2d085534.svg",
     "static/media/arrow-left.svg": "/bim-resume//static/media/arrow-left.27e63cb8d6f2ef583aa99bf9def67e01.svg",
     "main.48a2e103.css.map": "/bim-resume//static/css/main.48a2e103.css.map",
-    "main.b82a4c82.js.map": "/bim-resume//static/js/main.b82a4c82.js.map"
+    "main.4b05d0ff.js.map": "/bim-resume//static/js/main.4b05d0ff.js.map"
   },
   "entrypoints": [
     "static/css/main.48a2e103.css",
-    "static/js/main.b82a4c82.js"
+    "static/js/main.4b05d0ff.js"
   ]
 }
