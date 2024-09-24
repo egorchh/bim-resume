@@ -26,7 +26,7 @@ const Contacts = () => {
               <img className="contacts__icon" src={instagram} alt="Ссылка на Инстаграм" />
             </a>
           </div>
-          <p className="contacts__descr">Всегда открыт к предложениям и интересным проектам</p>
+          <p className="contacts__descr"></p>
           <div className="contacts__tell">
             <img className="contacts__tell-svg" src={tel} alt="Номер телефона" />
             <p className="contacts__tell-text">+7 (981) 681 51-94</p>
