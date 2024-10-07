@@ -9,7 +9,29 @@ import { Helmet } from "react-helmet";
 import './mainPage.css'
 import Skills from '../../component/skills/Skills';
 
-const MainPage = () => {
+const MainPage = ({ userTestGroup }) => {
+    let content = userTestGroup === 'test_1' ? (
+            <>
+                <Greeting />
+                <SeparatorLine />
+                <Projects userTestGroup={userTestGroup} />
+                <SeparatorLine />
+                <Experience />
+                <SeparatorLine />
+                <Skills />
+            </>
+    ) : (
+        <>
+            <Greeting />
+            <SeparatorLine />
+            <Experience />
+            <SeparatorLine />
+            <Projects userTestGroup={userTestGroup} />
+            <SeparatorLine />
+            <Skills />
+        </>
+    )
+
   return (
     <div className='mainpage'>
       <Helmet>
@@ -17,13 +39,7 @@ const MainPage = () => {
         <title>Александр Машкин</title>
       </Helmet>
       <Parallax />
-      <Greeting />
-      <SeparatorLine />
-      <Experience />
-      <SeparatorLine />
-      <Projects />
-      <SeparatorLine />
-      <Skills />
+        {content}
     </div>
   );
 };

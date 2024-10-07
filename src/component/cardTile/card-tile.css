@@ -1,0 +1,5 @@
+.card-tile__root {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}

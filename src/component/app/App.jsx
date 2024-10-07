@@ -7,24 +7,57 @@ import Contacts from "../contacts/Contacts";
 import SeparatorLine from "../ui/SeparatorLine/SeparatorLine";
 
 import "./app.css";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+
+const toggles = {
+    'replace_cards_into_list': {
+        'test_1': 'test_1',
+        'test_2': 'test_2',
+    },
+    'reorder_main_page_components': {
+        'test_1': 'test_1',
+        'test_2': 'test_2',
+    }
+}
 
 const App = () => {
+    const [userTestGroup, setUserTestGroup] = useState(undefined);
+
+
     useEffect(() => {
-        // eslint-disable-next-line
-        ym(98572006, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
+        // Ensure ym is available and then get the user ID (clientID)
+        if (typeof ym === 'function') {
+            // eslint-disable-next-line
+            ym(98572006, 'getClientID', function(clientID) {
+                if (clientID) {
+                    let testGroup = 'test_1';
+                    const isIdEven = Number(clientID.slice(-6)) % 2 === 0;
+
+                    if (isIdEven) {
+                        testGroup = 'test_2';
+                    }
+
+                    setUserTestGroup(testGroup);
+                }
+            });
+        }
     }, []);
+
+    useEffect(() => {
+        if (typeof ymab === 'function') {
+            // eslint-disable-next-line
+            ymab('metrika.98572006', 'getFlags', function(flags) {
+                // eslint-disable-next-line
+                console.log(flags);
+            });
+        }
+    }, [])
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<MainPage />} />
+          <Route path='/' element={<MainPage userTestGroup={userTestGroup} />} />
           <Route
                 path="/projects/:id"
                 element={
