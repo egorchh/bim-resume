@@ -12,11 +12,8 @@ import {useEffect} from "react";
 const App = () => {
     useEffect(() => {
         // eslint-disable-next-line
-        ym(98572006, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
+        ymab('metrika.98572006', 'getFlags', function(flags) {
+            console.debug(flags);
         });
     }, []);
 
