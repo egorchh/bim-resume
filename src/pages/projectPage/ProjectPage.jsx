@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import {useContext, useEffect} from "react";
 import { DataContext } from "../../dataContext/DataContext";
 
 import { Link, useParams } from "react-router-dom";
@@ -11,7 +11,17 @@ import Carousel from "../../component/carousel/Carousel";
 
 const ProjectPage = () => {
   const { id } = useParams();
-  const data = useContext(DataContext)
+  const data = useContext(DataContext);
+
+    useEffect(() => {
+        // eslint-disable-next-line
+        ym(98572006, "hit", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    }, []);
 
   const getElementById = () => {
     const filteredData = data.filter(item => item.id === +id);

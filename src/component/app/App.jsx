@@ -7,8 +7,19 @@ import Contacts from "../contacts/Contacts";
 import SeparatorLine from "../ui/SeparatorLine/SeparatorLine";
 
 import "./app.css";
+import {useEffect} from "react";
 
 const App = () => {
+    useEffect(() => {
+        // eslint-disable-next-line
+        ym(98572006, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    }, []);
+
   return (
     <>
       <Router>
