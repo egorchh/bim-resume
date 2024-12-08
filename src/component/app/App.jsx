@@ -8,20 +8,25 @@ import SeparatorLine from "../ui/SeparatorLine/SeparatorLine";
 
 import "./app.css";
 import {useEffect, useState} from "react";
-import { FIRST_TEST_GROUP, SECOND_TEST_GROUP } from '../../consts'
+import { A_EXPERIENCE_FIRST, A_SLIDER, FIRST_TEST_GROUP, SECOND_TEST_GROUP } from '../../consts'
 
 const App = () => {
-  const [testGroups, setTestGroups] = useState({});
+  const [testGroups, setTestGroups] = useState({
+    [FIRST_TEST_GROUP]: A_SLIDER,
+    [SECOND_TEST_GROUP]: A_EXPERIENCE_FIRST
+  });
 
   useEffect(() => {
     if (typeof ymab === 'function') {
         // eslint-disable-next-line
         ymab('metrika.98572163', 'getFlags', function(flags) {
           console.log(flags);
-          setTestGroups({
-            'first_test_group': flags[FIRST_TEST_GROUP][0],
-            'second_test_group': flags[SECOND_TEST_GROUP][0]
-          })
+          if (flags && flags[FIRST_TEST_GROUP] && flags[SECOND_TEST_GROUP]) {
+            setTestGroups({
+              'first_test_group': flags[FIRST_TEST_GROUP][0],
+              'second_test_group': flags[SECOND_TEST_GROUP][0]
+            })
+          }
         });
     }
   }, []);
