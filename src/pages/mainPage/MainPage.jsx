@@ -8,29 +8,30 @@ import { Helmet } from "react-helmet";
 
 import './mainPage.css'
 import Skills from '../../component/skills/Skills';
+import { B_PROJECTS_FIRST, SECOND_TEST_GROUP } from '../../consts';
 
-const MainPage = ({ userTestGroup }) => {
-    let content = userTestGroup === 'test_1' ? (
-            <>
-                <Greeting />
-                <SeparatorLine />
-                <Projects userTestGroup={userTestGroup} />
-                <SeparatorLine />
-                <Experience />
-                <SeparatorLine />
-                <Skills />
-            </>
-    ) : (
-        <>
-            <Greeting />
-            <SeparatorLine />
-            <Experience />
-            <SeparatorLine />
-            <Projects userTestGroup={userTestGroup} />
-            <SeparatorLine />
-            <Skills />
-        </>
-    )
+const MainPage = ({ testGroups }) => {
+  let content = testGroups[SECOND_TEST_GROUP] === B_PROJECTS_FIRST ? (
+          <>
+              <Greeting />
+              <SeparatorLine />
+              <Projects testGroups={testGroups} />
+              <SeparatorLine />
+              <Experience />
+              <SeparatorLine />
+              <Skills />
+          </>
+  ) : (
+      <>
+          <Greeting />
+          <SeparatorLine />
+          <Experience />
+          <SeparatorLine />
+          <Projects testGroups={testGroups} />
+          <SeparatorLine />
+          <Skills />
+      </>
+  )
 
   return (
     <div className='mainpage'>

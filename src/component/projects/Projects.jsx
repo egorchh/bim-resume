@@ -2,15 +2,16 @@ import Slider from "../slider/Slider";
 
 import './projects.css'
 import {CardTile} from "../cardTile/CardTile";
+import { A_SLIDER, FIRST_TEST_GROUP } from "../../consts";
 
-const Projects = ({ userTestGroup }) => {
+const Projects = ({ testGroups }) => {
   return (
     <section className="projects">
       <h2 className="projects__title">Примеры проектов</h2>
       <p className="projects__description">
         В моем портфолио присутствуют рендеры, конкурсные проекты, архитектурные презентации и графика
       </p>
-        {userTestGroup === 'test_1' ? <Slider /> :  <CardTile view='tile'/>}
+        {testGroups[FIRST_TEST_GROUP] === A_SLIDER ? <Slider /> :  <CardTile view='tile'/>}
     </section>
   );
 };

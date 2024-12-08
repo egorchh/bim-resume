@@ -15,7 +15,7 @@ const ProjectPage = () => {
 
     useEffect(() => {
         // eslint-disable-next-line
-        ym(98572006, "hit", {
+        ym(98572163, "hit", {
             clickmap:true,
             trackLinks:true,
             accurateTrackBounce:true,

@@ -9,6 +9,17 @@ const EmailForm = () => {
 
   const succesMessage = state.succeeded ? <SuccessMessage/> : null
 
+  const eventHandle = (callback) => {
+    if (typeof ym === 'function') {
+      // eslint-disable-next-line
+      ym(98572163,'reachGoal','sendContactForm')
+    }
+
+    setTimeout(() => {
+      callback();
+    })
+  }
+
   return (
     <Formik
       initialValues={{email: '', text: ''}}
@@ -32,11 +43,7 @@ const EmailForm = () => {
             <Field component="textarea" className='contacts__textarea' placeholder="Ваше сообщение" id="text" name="text" type="textarea"/>
             <ErrorMessage className='error-textarea' name="text" component="div"/>
           </div>
-          <button onClick={() => {
-            setTimeout(() => {
-              handleReset();
-            })
-          }} disabled={state.submitting || !isValid} className={`contacts__button ${state.submitting || !isValid ? 'disabled-button': 'active-button'}`} type="submit">
+          <button onClick={() => eventHandle(handleReset)} disabled={state.submitting || !isValid} className={`contacts__button ${state.submitting || !isValid ? 'disabled-button': 'active-button'}`} type="submit">
             Отправить
           </button>
           {isValid ? succesMessage : null}

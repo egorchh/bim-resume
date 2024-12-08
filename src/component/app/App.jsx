@@ -8,56 +8,29 @@ import SeparatorLine from "../ui/SeparatorLine/SeparatorLine";
 
 import "./app.css";
 import {useEffect, useState} from "react";
-
-const toggles = {
-    'replace_cards_into_list': {
-        'test_1': 'test_1',
-        'test_2': 'test_2',
-    },
-    'reorder_main_page_components': {
-        'test_1': 'test_1',
-        'test_2': 'test_2',
-    }
-}
+import { FIRST_TEST_GROUP, SECOND_TEST_GROUP } from '../../consts'
 
 const App = () => {
-    const [userTestGroup, setUserTestGroup] = useState(undefined);
+  const [testGroups, setTestGroups] = useState({});
 
-
-    useEffect(() => {
-        // Ensure ym is available and then get the user ID (clientID)
-        if (typeof ym === 'function') {
-            // eslint-disable-next-line
-            ym(98572006, 'getClientID', function(clientID) {
-                if (clientID) {
-                    let testGroup = 'test_1';
-                    const isIdEven = Number(clientID.slice(-6)) % 2 === 0;
-
-                    if (isIdEven) {
-                        testGroup = 'test_2';
-                    }
-
-                    setUserTestGroup(testGroup);
-                }
-            });
-        }
-    }, []);
-
-    useEffect(() => {
-        if (typeof ymab === 'function') {
-            // eslint-disable-next-line
-            ymab('metrika.98572006', 'getFlags', function(flags) {
-                // eslint-disable-next-line
-                console.log(flags);
-            });
-        }
-    }, [])
+  useEffect(() => {
+    if (typeof ymab === 'function') {
+        // eslint-disable-next-line
+        ymab('metrika.98572163', 'getFlags', function(flags) {
+          console.log(flags);
+          setTestGroups({
+            'first_test_group': flags[FIRST_TEST_GROUP][0],
+            'second_test_group': flags[SECOND_TEST_GROUP][0]
+          })
+        });
+    }
+  }, []);
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<MainPage userTestGroup={userTestGroup} />} />
+          <Route path='/' element={<MainPage testGroups={testGroups} />} />
           <Route
                 path="/projects/:id"
                 element={
