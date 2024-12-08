@@ -12,7 +12,7 @@ const EmailForm = () => {
   const eventHandle = (callback) => {
     if (typeof ym === 'function') {
       // eslint-disable-next-line
-      ym(98572163,'reachGoal','sendContactForm')
+      ym(98572163,'reachGoal','sendContactForm', () => console.log('form submit button click'))
     }
 
     setTimeout(() => {

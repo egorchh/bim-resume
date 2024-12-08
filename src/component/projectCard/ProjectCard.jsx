@@ -2,18 +2,8 @@ import { Link } from "react-router-dom";
 import './project-card.css';
 
 import linkSVG from '../../assets/images/svg/link.svg';
-import { useEffect } from "react";
 
 export const ProjectCard = ({ item }) => {
-    useEffect(() => {
-        if (typeof ym !== 'function') {
-            return;
-        }
-
-        // eslint-disable-next-line
-        ym(98572163,'reachGoal','openProject')
-    }, []);
-
     return (
         <div key={item.id} className={`slide__wrapper`}>
             <div className="each-slide-effect">

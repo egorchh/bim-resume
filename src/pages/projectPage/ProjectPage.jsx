@@ -12,16 +12,14 @@ import Carousel from "../../component/carousel/Carousel";
 const ProjectPage = () => {
   const { id } = useParams();
   const data = useContext(DataContext);
+  useEffect(() => {
+    if (typeof ym !== 'function') {
+        return;
+    }
 
-    useEffect(() => {
-        // eslint-disable-next-line
-        ym(98572163, "hit", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    }, []);
+    // eslint-disable-next-line
+    ym(98572163,'reachGoal','openProject', () => console.log('logged openProject'))
+  }, []);
 
   const getElementById = () => {
     const filteredData = data.filter(item => item.id === +id);
